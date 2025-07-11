@@ -72,7 +72,7 @@ class DomainForm(NetBoxModelForm):
     )
     
     fieldsets = (
-        FieldSet('name', 'created_at', 'reneval_date', 'cancellation_date', 'tags', 'status', 'comments', name=_('Domain')),
+        FieldSet('name', 'created_at', 'renewal_date', 'cancellation_date', 'tags', 'status', 'comments', name=_('Domain')),
         FieldSet('nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', name=_('Nameserver')),
         FieldSet('tenant_group', 'tenant',  name=_('Tenant')),
         FieldSet('ownerc', 'adminc', 'techc', 'zonec', name=_('Contact')),
@@ -81,13 +81,13 @@ class DomainForm(NetBoxModelForm):
 
     class Meta:
         model = Domain
-        fields = ['name', 'created_at', 'reneval_date', 'cancellation_date', 'tags', 'status', 'comments', 'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', 'tenant_group', 'tenant', 'ownerc', 'adminc', 'techc', 'zonec', 'term']
+        fields = ['name', 'created_at', 'renewal_date', 'cancellation_date', 'tags', 'status', 'comments', 'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', 'tenant_group', 'tenant', 'ownerc', 'adminc', 'techc', 'zonec', 'term']
         help_texts = {
             'status': "Status",
         }
         widgets = {
             'created_at': DatePicker(),
-            'reneval_date': DatePicker(),
+            'renewal_date': DatePicker(),
             'cancellation_date': DatePicker(),
         }
 
@@ -115,7 +115,7 @@ class DomainBulkEditForm(NetBoxModelBulkEditForm):
         widget=DatePicker
     )
     
-    reneval_date = forms.DateField(
+    renewal_date = forms.DateField(
         required=False,
         widget=DatePicker
     )
@@ -181,7 +181,7 @@ class DomainBulkEditForm(NetBoxModelBulkEditForm):
     model = Domain
 
     fieldsets = (
-        FieldSet('name', 'created_at', 'reneval_date', 'cancellation_date', 'tags', 'status', 'comments', name=_('Domain')),
+        FieldSet('name', 'created_at', 'renewal_date', 'cancellation_date', 'tags', 'status', 'comments', name=_('Domain')),
         FieldSet('nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', name=_('Nameserver')),
         FieldSet('tenant_group', 'tenant',  name=_('Tenant')),
         FieldSet('ownerc', 'adminc', 'techc', 'zonec', name=_('Contact')),
@@ -198,7 +198,7 @@ class DomainFilterForm(NetBoxModelFilterSetForm):
     model = Domain
 
     fieldsets = (
-        FieldSet('name', 'created_at', 'reneval_date', 'cancellation_date', 'tags', 'status', 'comments', name=_('Domain')),
+        FieldSet('name', 'created_at', 'renewal_date', 'cancellation_date', 'tags', 'status', 'comments', name=_('Domain')),
         FieldSet('nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', name=_('Nameserver')),
         FieldSet('tenant_group_id', 'tenant_id',  name=_('Tenant')),
         FieldSet('ownerc_id', 'adminc_id', 'techc_id', 'zonec_id', name=_('Contact')),
@@ -218,7 +218,7 @@ class DomainFilterForm(NetBoxModelFilterSetForm):
         required=False
     )
     
-    reneval_date = forms.DateField(
+    renewal_date = forms.DateField(
         required=False
     )
     
@@ -353,7 +353,7 @@ class DomainCSVForm(NetBoxModelImportForm):
 
     class Meta:
         model = Domain
-        fields = ['name', 'created_at', 'reneval_date', 'cancellation_date', 'tags', 'status', 'comments', 'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', 'tenant_group', 'tenant', 'ownerc', 'adminc', 'techc', 'zonec', 'term']
+        fields = ['name', 'created_at', 'renewal_date', 'cancellation_date', 'tags', 'status', 'comments', 'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', 'tenant_group', 'tenant', 'ownerc', 'adminc', 'techc', 'zonec', 'term']
         default_return_url = 'plugins:adestis_netbox_domain_management:domain_list'
 
 class DomainAssignTenantGroupForm(forms.Form):

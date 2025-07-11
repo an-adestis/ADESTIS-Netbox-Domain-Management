@@ -2,6 +2,7 @@ name: "local_docker_netbox_domain_management_plugin"
 services:
   netbox: &netbox
     image: adestis-netbox-domain-management-plugin:latest
+    
     build:
       context: ../
       dockerfile: Dev-Dockerfile
@@ -23,7 +24,7 @@ services:
     # docker compose run netbox sh -c "python manage.py makemigrations adestis_netbox_domain_management"
     volumes:
       - ../adestis_netbox_domain_management/migrations:/opt/netbox/venv/lib/python3.12/site-packages/adestis_netbox_domain_management/migrations
-  netbox-worker:
-    <<: *netbox
-  netbox-housekeeping:
-    <<: *netbox
+  # netbox-worker:
+  #   <<: *netbox
+  # netbox-housekeeping:
+  #   <<: *netbox

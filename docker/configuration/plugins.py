@@ -6,11 +6,15 @@
 
 PLUGINS = [
     "adestis_netbox_domain_management",
+    "netbox_certificate_management",
+    "adestis_netbox_applications",
 ]
 
-# PLUGINS_CONFIG = {
-#   "netbox_bgp": {
-#     ADD YOUR SETTINGS HERE
-#   }
-# }
+PLUGINS_CONFIG = {
+  'netbox_certificate': {},
+  "netbox_certificate_management": {
+        'top_level_menu': True,
+        },
+  "adestis_netbox_applications":{},
+}
 

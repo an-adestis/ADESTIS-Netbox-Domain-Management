@@ -14,3 +14,6 @@ COPY ./docker/requirements-container.txt /source/adestis-netbox-domain-managemen
 COPY ./docker/configuration/configuration.py /etc/netbox/config/configuration.py
 RUN /usr/local/bin/uv pip install /source/adestis-netbox-domain-management/
 RUN /usr/local/bin/uv pip install -r /source/adestis-netbox-domain-management/requirements-container.txt
+RUN /usr/local/bin/uv pip install netbox-certificate==1.0.1
+RUN /usr/local/bin/uv pip install adestis-netbox-applications==1.0.13
+RUN /usr/local/bin/uv pip install cert_utils

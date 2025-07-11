@@ -47,5 +47,5 @@ class DomainTable(NetBoxTable):
 
     class Meta(NetBoxTable.Meta):
         model = Domain
-        fields = ['name', 'tenant', 'created_at', 'reneval_date', 'cancellation_date', 'status', 'comments', 'actions', 'tags', 'created', 'last_updated', 'tenant_group', 'ownerc', 'adminc', 'techc', 'zonec', 'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', 'term', 'domain']
-        default_columns = ['name', 'tenant', 'created_at', 'reneval_date', 'cancellation_date', 'status',]
+        fields = ['name', 'tenant', 'created_at', 'renewal_date', 'cancellation_date', 'status', 'comments', 'actions', 'tags', 'created', 'last_updated', 'tenant_group', 'ownerc', 'adminc', 'techc', 'zonec', 'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', 'term', 'domain']
+        default_columns = ['name', 'tenant', 'created_at', 'renewal_date', 'cancellation_date', 'status',]

@@ -16,14 +16,14 @@ class DomainStatusChoices(ChoiceSet):
     STATUS_DRAFT = 'draft'
     STATUS_CANCEL_BEFORE_RENEWAL = 'cancel before renewal'
     STATUS_CANCELLED = 'cancelled'
-    STATUS_TRANSFERRED_TO_OTHER_PROVIDERS = 'transferred to other provider'
+    STATUS_TRANSFERRED_TO_OTHER_PROVIDER = 'transferred to other provider'
 
     CHOICES = [
         (STATUS_ACTIVE, 'Active', 'green'),
         (STATUS_DRAFT, 'Draft', 'cyan'),
         (STATUS_CANCEL_BEFORE_RENEWAL, 'Cancel before Renewal', 'yellow'),
         (STATUS_CANCELLED, 'Cancelled', 'red'),
-        (STATUS_TRANSFERRED_TO_OTHER_PROVIDERS, 'Transferred to Other Provider', 'gray'),
+        (STATUS_TRANSFERRED_TO_OTHER_PROVIDER, 'Transferred to Other Provider', 'gray'),
     ]
 
 
@@ -114,8 +114,8 @@ class Domain(NetBoxModel):
     cancellation_date = django_models.DateField(
         verbose_name='Cancellation Date',
         null=True,
+        blank=True, 
         help_text='Cancellation Date',
-        required = False
     )
     
     term = django_models.TextField(
