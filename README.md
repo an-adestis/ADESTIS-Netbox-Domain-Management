@@ -1,10 +1,8 @@
-# NetBox Certificate Plugin
+# ADESTIS NetBox Domain Management Plugin
 
-The **NetBox Certificate Plugin** extends NetBox with the ability to manage certificates and link them to various existing NetBox objects.
+The **ADESTIS NetBox Domain Management Plugin** extends NetBox with the ability to manage domains and link them to various existing NetBox objects.
 
-In addition to manually creating certificates, the plugin supports importing entire certificate bundles (e.g., PEM files). During the import process, certificates are automatically parsed, relevant data is extracted, and associations with appropriate NetBox objects are created automatically.
-
-The plugin also provides a clean and structured UI to display all key certificate details and allows flexible associations with various NetBox objects such as systems, clusters, tenants, and more.
+The plugin also allows flexible associations with various NetBox objects such as contacts and tenants.
 
 ---
 
@@ -12,33 +10,26 @@ The plugin also provides a clean and structured UI to display all key certificat
 
 - Manage domains directly within NetBox
 - Flexible association of domains with existing NetBox objects
-- Clean and structured UI integration
+
 
 ---
 ## Screenshots
 
-![Certificates Details](./certificate/img01.png)
-![Certificates View](./certificate/img02.png)
+![Domain Details](./domian.test1.png)
+![Certificates View](./domaintest2.png)
 
 ## ⚙️ Installation
 
 The plugin is available on PyPI and can be installed via pip:
 
 ```bash
-pip install netbox_certificate_management
+pip install adestis_netbox_domain_management
 ```
 
 ## ✅ Compatibility
-
-> **Note**: This plugin depends on the [`adestis-netbox-applications`](https://pypi.org/project/adestis-netbox-applications/) plugin.  
-> Therefore, its compatibility is directly tied to the NetBox version used in the base image.
 
 The plugin is developed and tested using the following base image:
 
 ```dockerfile
 ARG FROM_TAG=v4.2.9-3.2.1  # NetBox v4.2.9
 ```
-
-
-
-

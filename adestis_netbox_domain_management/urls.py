@@ -31,5 +31,4 @@ urlpatterns = (
     
     path('domains/tenants/', TenantAffectedDomainView.as_view(),
          name='domaintenant_list'), 
-
 )
