@@ -15,8 +15,9 @@ The plugin also allows flexible associations with various NetBox objects such as
 ---
 ## Screenshots
 
-![Domain Details](https://github.com/an-adestis/ADESTIS-Netbox-Domain-Management/blob/1-feat-test/domian.test1.png)
-![Domain View](https://github.com/an-adestis/ADESTIS-Netbox-Domain-Management/blob/1-feat-test/domaintest2.png)
+![Domain Details](https://github.com/an-adestis/ADESTIS-Netbox-Domain-Management/raw/1-feat-test/domian.test1.png)
+
+![Domain View](https://github.com/an-adestis/ADESTIS-Netbox-Domain-Management/raw/1-feat-test/domaintest2.png)
 
 
 ## ⚙️ Installation

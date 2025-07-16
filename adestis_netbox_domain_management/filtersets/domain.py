@@ -39,7 +39,7 @@ class DomainFilterSet(NetBoxModelFilterSet):
         widget=DatePicker
     )
     
-    reneval_date = forms.DateField(
+    renewal_date = forms.DateField(
         required=False,
         widget=DatePicker
     )
@@ -122,7 +122,7 @@ class DomainFilterSet(NetBoxModelFilterSet):
     
     class Meta:
         model = Domain
-        fields = ['id', 'name', 'created_at', 'reneval_date', 'cancellation_date', 'tags', 'status', 'comments', 'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', 'tenant_group', 'tenant', 'ownerc', 'adminc', 'techc', 'zonec', 'ownerc_id', 'adminc_id', 'techc_id', 'zonec_id', 'term']
+        fields = ['id', 'name', 'created_at', 'renewal_date', 'cancellation_date', 'tags', 'status', 'comments', 'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', 'tenant_group', 'tenant', 'ownerc', 'adminc', 'techc', 'zonec', 'ownerc_id', 'adminc_id', 'techc_id', 'zonec_id', 'term']
 
     def search(self, queryset, name, value):
         if not value.strip():

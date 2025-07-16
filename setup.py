@@ -3,8 +3,8 @@ from pathlib import Path
 with open("README.md", "r") as f:
     description = f.read()
 setup(
-    name='adestis-netbox-domain-management',
-    version='1.0.2',
+    name='adestis_netbox_domain_management',
+    version='1.0.3',
     description='ADESTIS Domain Management',
     url='https://github.com/an-adestis/ADESTIS-Netbox-Domain-Management/tree/master',
     author='ADESTIS GmbH',
