@@ -4,9 +4,9 @@ with open("README.md", "r") as f:
     description = f.read()
 setup(
     name='adestis-netbox-domain-management',
-    version='1.0.1',
+    version='1.0.2',
     description='ADESTIS Domain Management',
-    url='https://acme.com',
+    url='https://github.com/an-adestis/ADESTIS-Netbox-Domain-Management/tree/master',
     author='ADESTIS GmbH',
     author_email='pypi@adestis.de',
     install_requires=[],

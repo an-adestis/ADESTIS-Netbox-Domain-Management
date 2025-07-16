@@ -4,7 +4,7 @@ class AdestisAccountManagementConfig(PluginConfig):
     name = 'adestis_netbox_domain_management'
     verbose_name = 'Domain Management'
     description = 'A NetBox plugin for managing certficates.'
-    version = '1.0.1'
+    version = '1.0.2'
     author = 'ADESTIS GmbH'
     author_email = 'pypi@adestis.de'
     base_url = 'domains'

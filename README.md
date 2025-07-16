@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 # ADESTIS NetBox Domain Management Plugin
 
 The **ADESTIS NetBox Domain Management Plugin** extends NetBox with the ability to manage domains and link them to various existing NetBox objects.
@@ -17,8 +15,8 @@ The plugin also allows flexible associations with various NetBox objects such as
 ---
 ## Screenshots
 
-![Domain Details](https://raw.githubusercontent.com/an-adestis/adestis-netbox-domain-management/master/domain.test1.png)
-![Domain View](https://raw.githubusercontent.com/an-adestis/adestis-netbox-domain-management/master/domain.test2.png)
+![Domain Details](https://github.com/an-adestis/ADESTIS-Netbox-Domain-Management/blob/1-feat-test/domian.test1.png)
+![Domain View](https://github.com/an-adestis/ADESTIS-Netbox-Domain-Management/blob/1-feat-test/domaintest2.png)
 
 
 ## ⚙️ Installation
@@ -36,4 +34,3 @@ The plugin is developed and tested using the following base image:
 ```dockerfile
 ARG FROM_TAG=v4.2.9-3.2.1  # NetBox v4.2.9
 ```
->>>>>>> Stashed changes
