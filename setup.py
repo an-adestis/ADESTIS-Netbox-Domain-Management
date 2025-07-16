@@ -1,8 +1,10 @@
 from setuptools import find_packages, setup
-
+from pathlib import Path
+with open("README.md", "r") as f:
+    description = f.read()
 setup(
     name='adestis-netbox-domain-management',
-    version='1.0.0',
+    version='1.0.1',
     description='ADESTIS Domain Management',
     url='https://acme.com',
     author='ADESTIS GmbH',
@@ -15,5 +17,7 @@ setup(
     package_data={
         "adestis_netbox_domain_management": ["**/*.html"],
         '': ['LICENSE'],
-    }
+    },
+    long_description=description,
+    long_description_content_type="text/markdown",
 )

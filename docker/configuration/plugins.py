@@ -6,6 +6,7 @@
 
 PLUGINS = [
     "adestis_netbox_domain_management",
+<<<<<<< Updated upstream
 ]
 
 # PLUGINS_CONFIG = {
@@ -13,4 +14,16 @@ PLUGINS = [
 #     ADD YOUR SETTINGS HERE
 #   }
 # }
+=======
+    "adestis_netbox_certificate_management",
+    "adestis_netbox_applications",
+]
+
+PLUGINS_CONFIG = {
+
+  "adestis_netbox_domain_management":{},
+  "adestis_netbox_certificate_management":{},
+  "adestis_netbox_plugin_applications": {},
+}
+>>>>>>> Stashed changes
 
