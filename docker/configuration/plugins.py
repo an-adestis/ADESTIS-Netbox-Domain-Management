@@ -7,6 +7,7 @@
 PLUGINS = [
     "adestis_netbox_domain_management",
     "adestis_netbox_applications",
+    "adestis_netbox_certificate_management",
 ]
 
 PLUGINS_CONFIG = {
