@@ -16,7 +16,7 @@ urlpatterns = (
     path('domains/edit/', DomainBulkEditView.as_view(),
          name='domain_bulk_edit'),
     path('domains/import/', DomainBulkImportView.as_view(),
-         name='domain_import'),
+         name='domain_bulk_import'),
     path('domains/<int:pk>/',
          DomainView.as_view(), name='domain'),
     path('domains/<int:pk>/',

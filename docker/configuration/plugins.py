@@ -14,7 +14,7 @@ PLUGINS_CONFIG = {
 
   "adestis_netbox_domain_management":{},
   "adestis_netbox_certificate_management":{},
-  "adestis_netbox_plugin_applications": {},
+  "adestis_netbox_applications": {},
 }
 
 
