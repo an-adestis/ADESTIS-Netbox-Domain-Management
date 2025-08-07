@@ -1,0 +1,19 @@
+ARG FROM_IMAGE=netboxcommunity/netbox
+ARG FROM_TAG=v4.2.9-3.2.1
+ARG FROM=${FROM_IMAGE}:${FROM_TAG}
+FROM ${FROM}
+
+ENV VIRTUAL_ENV=/opt/netbox/venv
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+COPY ./adestis_netbox_domain_management /source/adestis-netbox-domain-management/adestis_netbox_domain_management/
+COPY ./setup.py /source/adestis-netbox-domain-management/
+COPY ./MANIFEST.in /source/adestis-netbox-domain-management/
+COPY ./README.md /source/adestis-netbox-domain-management/
+COPY ./docker/requirements-container.txt /source/adestis-netbox-domain-management/
+COPY ./docker/configuration/configuration.py /etc/netbox/config/configuration.py
+RUN /usr/local/bin/uv pip install /source/adestis-netbox-domain-management/
+RUN /usr/local/bin/uv pip install -r /source/adestis-netbox-domain-management/requirements-container.txt
+# RUN /usr/local/bin/uv pip install adestis-netbox-certificate-management==1.0.13
+# RUN /usr/local/bin/uv pip install adestis-netbox-applications==1.0.13
+# RUN /usr/local/bin/uv pip install cert_utils
