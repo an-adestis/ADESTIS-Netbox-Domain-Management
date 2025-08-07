@@ -4,7 +4,7 @@ with open("README.md", "r") as f:
     description = f.read()
 setup(
     name='adestis_netbox_domain_management',
-    version='1.0.5',
+    version='1.0.7',
     description='ADESTIS Domain Management',
     url='https://github.com/an-adestis/ADESTIS-Netbox-Domain-Management/tree/master',
     author='ADESTIS GmbH',
