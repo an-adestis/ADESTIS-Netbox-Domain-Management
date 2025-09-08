@@ -125,6 +125,7 @@ class Domain(NetBoxModel):
     class Meta:
         verbose_name_plural = "Domains"
         verbose_name = 'Domain'
+        ordering = ['name']
 
     def __str__(self):
         return self.name

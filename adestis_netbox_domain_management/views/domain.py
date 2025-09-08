@@ -71,7 +71,7 @@ class TenantAffectedDomainView(generic.ObjectChildrenView):
         'export': {'view'},
         'bulk_import': {'add'},
         'bulk_edit': {'change'},
-        'bulk_remove_tenant': {'change'},
+        # 'bulk_remove_tenant': {'change'},
     }
 
     tab = ViewTab(
