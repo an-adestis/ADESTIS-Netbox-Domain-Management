@@ -1,5 +1,5 @@
 ARG FROM_IMAGE=netboxcommunity/netbox
-ARG FROM_TAG=v4.2.9-3.2.1
+ARG FROM_TAG=v4.3.7-3.3.0
 ARG FROM=${FROM_IMAGE}:${FROM_TAG}
 FROM ${FROM}
 
@@ -15,5 +15,6 @@ COPY ./docker/configuration/configuration.py /etc/netbox/config/configuration.py
 RUN /usr/local/bin/uv pip install /source/adestis-netbox-domain-management/
 RUN /usr/local/bin/uv pip install -r /source/adestis-netbox-domain-management/requirements-container.txt
 # RUN /usr/local/bin/uv pip install adestis-netbox-certificate-management==1.0.13
-# RUN /usr/local/bin/uv pip install adestis-netbox-applications==1.0.13
+# RUN /usr/local/bin/uv pip install adestis-netbox-applications==1.0.18
 # RUN /usr/local/bin/uv pip install cert_utils
+# RUN /usr/local/bin/uv pip install adestis-netbox-certificate-management==1.0.17
