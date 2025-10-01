@@ -33,5 +33,5 @@ pip install adestis-netbox-domain-management
 The plugin is developed and tested using the following base image:
 
 ```dockerfile
-ARG FROM_TAG=v4.2.9-3.2.1  # NetBox v4.2.9
+ARG FROM_TAG=v4.3.7-3.3.0  # NetBox v4.3.7
 ```
