@@ -296,17 +296,17 @@ class DomainFilterForm(NetBoxModelFilterSetForm):
 
 
 class DomainCSVForm(NetBoxModelImportForm):
-
+    
     status = CSVChoiceField(
         choices=DomainStatusChoices,
         help_text=_('Status'),
-        required=True,
+        required=False,
     )
     
     tenant_group = CSVModelChoiceField(
         label=_('Tenant Group'),
         queryset=TenantGroup.objects.all(),
-        required=True,
+        required=False,
         to_field_name='name',
         help_text=('Name of assigned tenant group')
     )
@@ -314,7 +314,7 @@ class DomainCSVForm(NetBoxModelImportForm):
     tenant = CSVModelChoiceField(
         label=_('Tenant'),
         queryset=Tenant.objects.all(),
-        required=True,
+        required=False,
         to_field_name='name',
         help_text=_('Name of assigned tenant')
     )
@@ -322,7 +322,7 @@ class DomainCSVForm(NetBoxModelImportForm):
     ownerc = CSVModelChoiceField(
         label=_('Owner C'),
         queryset=Contact.objects.all(),
-        required=True,
+        required=False,
         to_field_name='name',
         help_text=('Name of assigned Owner C')
     )
@@ -330,7 +330,7 @@ class DomainCSVForm(NetBoxModelImportForm):
     adminc = CSVModelChoiceField(
         label=_('Admin C'),
         queryset=Contact.objects.all(),
-        required=True,
+        required=False,
         to_field_name='name',
         help_text=('Name of assigned Admin C')
     )
@@ -338,7 +338,7 @@ class DomainCSVForm(NetBoxModelImportForm):
     techc = CSVModelChoiceField(
         label=_('Tech C'),
         queryset=Contact.objects.all(),
-        required=True,
+        required=False,
         to_field_name='name',
         help_text=('Name of assigned Tech C')
     )
@@ -346,7 +346,7 @@ class DomainCSVForm(NetBoxModelImportForm):
     zonec = CSVModelChoiceField(
         label=_('Zone C'),
         queryset=Contact.objects.all(),
-        required=True,
+        required=False,
         to_field_name='name',
         help_text=('Name of assigned Zone C')
     )
@@ -355,6 +355,7 @@ class DomainCSVForm(NetBoxModelImportForm):
         model = Domain
         fields = ['name', 'created_at', 'renewal_date', 'cancellation_date', 'tags', 'status', 'comments', 'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4', 'tenant_group', 'tenant', 'ownerc', 'adminc', 'techc', 'zonec', 'term']
         default_return_url = 'plugins:adestis_netbox_domain_management:domain_list'
+        
 
 class DomainAssignTenantGroupForm(forms.Form):
     
@@ -386,9 +387,6 @@ class DomainRemoveTenantGroup(ConfirmationForm):
         queryset=TenantGroup.objects.all(),
         widget=forms.MultipleHiddenInput()
     )
-    
-
-    
     
 class DomainAssignTenantForm(forms.Form):
     
