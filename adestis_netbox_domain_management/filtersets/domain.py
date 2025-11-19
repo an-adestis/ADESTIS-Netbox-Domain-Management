@@ -129,6 +129,21 @@ class DomainFilterSet(NetBoxModelFilterSet):
             return queryset
         return queryset.filter( 
             Q(status__icontains=value) |
-            Q(system_url__icontains=value) |
-            Q(system_status__icontains=value)
+            
+            Q(name__icontains=value) |
+            Q(ownerc__name__icontains=value) |
+            Q(adminc__name__icontains=value) |
+            Q(zonec__name__icontains=value) |
+            Q(techc__name__icontains=value) |
+            Q(tenant__name__icontains=value) |
+            Q(tenant_group__name__icontains=value) |
+            Q(nameserver_1__icontains=value) |
+            Q(nameserver_2__icontains=value) |
+            Q(nameserver_3__icontains=value) |
+            Q(nameserver_4__icontains=value) |
+            Q(comments__icontains=value) |
+            Q(created_at__icontains=value) |
+            Q(renewal_date__icontains=value) |
+            Q(cancellation_date__icontains=value) |
+            Q(term__icontains=value)
         )
