@@ -146,4 +146,4 @@ class DomainFilterSet(NetBoxModelFilterSet):
             Q(renewal_date__icontains=value) |
             Q(cancellation_date__icontains=value) |
             Q(term__icontains=value)
-        )
+        ).distinct()
