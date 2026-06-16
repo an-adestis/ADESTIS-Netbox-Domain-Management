@@ -14,8 +14,21 @@ class DomainSerializer(NetBoxModelSerializer):
 
     class Meta:
         model = Domain
-        fields = ('id', 'tags', 'custom_fields', 'display', 'url', 'created', 'last_updated',
-                  'custom_field_data', 'status', 'comments')
-        brief_fields = ('id', 'tags', 'custom_fields', 'display', 'url', 'created', 'last_updated',
-                        'custom_field_data', 'status', 'comments')
-
+        fields = (
+            'id', 'tags', 'custom_fields', 'display', 'url', 'created', 'last_updated',
+            'custom_field_data', 'status', 'comments', 'renewal_date',
+            'name', 'term',
+            'tenant', 'tenant_group',
+            'ownerc', 'adminc', 'techc', 'zonec',
+            'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4',
+            'created_at', 'cancellation_date',
+        )
+        brief_fields = (
+            'id', 'tags', 'custom_fields', 'display', 'url', 'created', 'last_updated',
+            'custom_field_data', 'status', 'comments', 'renewal_date',
+            'name', 'term',
+            'tenant', 'tenant_group',
+            'ownerc', 'adminc', 'techc', 'zonec',
+            'nameserver_1', 'nameserver_2', 'nameserver_3', 'nameserver_4',
+            'created_at', 'cancellation_date',
+        )
