@@ -99,24 +99,18 @@ class DomainBulkEditForm(NetBoxModelBulkEditForm):
     )
     
     name = forms.CharField(
-        required=False,
-        max_length = 150,
-        label=_("Name"),
-    )
-    
-    name = forms.CharField(
-        required=False,
+        required=True,
         max_length = 150,
         label=_("Name"),
     )
     
     created_at = forms.DateField(
-        required=False,
+        required=True,
         widget=DatePicker
     )
     
     renewal_date = forms.DateField(
-        required=False,
+        required=True,
         widget=DatePicker
     )
     
@@ -132,7 +126,7 @@ class DomainBulkEditForm(NetBoxModelBulkEditForm):
     )
 
     status = forms.ChoiceField(
-        required=False,
+        required=True,
         choices=DomainStatusChoices,
     )
     
